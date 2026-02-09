@@ -30,7 +30,7 @@ Comando commit -m "mensagem"
 
 
 Baixar atualizações do Github
-
+```
 git pull
 ```
 

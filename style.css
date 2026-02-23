@@ -1,3 +1,6 @@
+/* RESET DAS CONFIGURAÇÕES DO NAVEGADOR */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,19 +8,21 @@
 }
 
 body {
-    background-color: rgba(37, 21, 110, 0.842);
-    background-image: url(assets/images2.jpg);
+    background-color: rgb(255, 255, 255);
+    /* background-image: url(assets/images2.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+
+    
 }
 
-h1 {
+h2 {
     margin: 20px;
     font-size: 50px;
     text-align: center;
-    color: rgb(226, 137, 20);
+    color: rgb(0, 136, 255);
 }
 
 p {
@@ -25,4 +30,26 @@ p {
     font-size: 15px;
     font-family: 'Arial';
     margin: 20px;
+    color: rgb(0, 136, 255);
+}
+ 
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 30px;
+    margin: 10px auto;
+
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    padding:  5px 30px;
+    border-radius: 30px;
 }

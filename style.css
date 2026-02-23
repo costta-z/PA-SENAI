@@ -9,13 +9,11 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    /* background-image: url(assets/images2.jpg); */
+    /* background-image: url(assets/fundo.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
-    
 }
 
 h2 {
@@ -52,4 +50,16 @@ button {
     cursor: pointer;
     padding:  5px 30px;
     border-radius: 30px;
+}
+
+ol {
+    padding:  30px auto;
+    text-align: center;
+    list-style-position: inside;
+}
+
+li {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
 }

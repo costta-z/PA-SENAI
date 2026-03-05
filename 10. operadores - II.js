@@ -1,7 +1,7 @@
 // Operadores lógicos - II.
 
-let condicao_a = 1 < 2
-let condicao_b = 10 < 2
+let condicao_a = 1 < 2  //True
+let condicao_b = 10 < 2 // False
 
 console.log(" - AND -")
 console.log(condicao_a && condicao_b)

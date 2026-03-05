@@ -1,4 +1,4 @@
-// Operadores lógicos.
+// Operadores lógicos - I.
 
 let idade = 10
 let peso = "10"

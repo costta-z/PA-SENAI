@@ -43,7 +43,6 @@ menoridade.forEach( usuario =>
 console.log(`${usuario.nome} tem ${usuario.idade} anos.`)
 )
 
-
 console.log("\n Na lista de números, filtre e mostre apenas números pares:");
 const pares = listaDenumeros.filter(n => n % 2 == 0)
 console.log(pares)
@@ -51,5 +50,22 @@ console.log(pares)
 console.log("\nNa lista de nomes, mostre todos os nomes com forEach:")
 listaDeNomes.forEach( u => 
     console.log(`${listaDeNomes}`)
-    
 )
+
+console.log("\nNa lista de usuários, apenas os nomes.")
+const nomes = listaDeUsuarios.map(u => u.nome)
+nomes.forEach(nome => console.log(`Nome: ${nome}`))
+
+console.log("\nNa lista de usuários, encontre um usuário.")
+const usuarioEncontrado = listaDeUsuarios.find(u => u.nome === "Ana")
+console.log(usuarioEncontrado)
+console.log(`Nome : ${usuarioEncontrado.nome} \nIdade: ${usuarioEncontrado.idade}`)
+
+console.log("\nNa lista de usuários, encontre um usuário com idade de 45 anos.")
+const usuario = listaDeUsuarios.find(u => u.idade === 45)
+console.log(usuario)
+console.log(`Idade: ${usuario.idade} \nNome : ${usuario.nome} `)
+
+console.log("\nNa lista de usuários, somando todas as idades: ")
+const somaIdades = listaDeUsuarios.reduce((total, usuario) => total + usuario.idade, 0)
+console.log(somaIdades)

@@ -1,0 +1,126 @@
+/* RESET DO NAVEGADOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando uma fonte futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Rajdhani', sans-serif;
+    /* Fundo degradê simulando o espaço profundo */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Efeito de estrelas simples usando box-shadow */
+body::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 
+        10vw 20vh #fff, 25vw 50vh #fff, 70vw 10vh #fff, 
+        85vw 80vh #fff, 40vw 90vh #fff, 15vw 5vh #fff,
+        60vw 40vh #fff, 95vw 30vh #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle 5s infinite alternate;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #a0a0ff;
+}
+
+input[type="number"] {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #3d5afe;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    width: 80px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #3d5afe, #00d4ff);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#resultadoTabuada {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Animação para as estrelas brilharem */
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 0.8; }
+}

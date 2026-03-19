@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset básico para garantir que fique igual em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Fundo da página - Azul escuro (referência à bandeira do Brasil) */
+body {
+    background-color: #002776; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* O container principal - Simula o design de uma urna/cartão de votação */
+.container {
+    background-color: #f4f6f8;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    /* Bordas temáticas com o verde e amarelo */
+    border-top: 10px solid #009c3b; 
+    border-bottom: 10px solid #ffdf00; 
+}
+
+/* Estilizando o texto (label) */
+label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estilizando o campo de digitar a idade */
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Remove as setinhas feias de dentro do input de número */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Efeito ao clicar/focar no campo */
+input[type="number"]:focus {
+    outline: none;
+    border-color: #002776;
+    box-shadow: 0 0 8px rgba(0, 39, 118, 0.3);
+}
+
+/* Botão de Verificar - Inspirado na tecla CONFIRMA (Verde) */
+button {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #1aa34a; /* Verde da urna */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+button:hover {
+    background-color: #148039;
+}
+
+/* Efeito de clique do botão */
+button:active {
+    transform: scale(0.97);
+    background-color: #0e5e29;
+}
+
+/* Estilização da mensagem de resultado que aparecerá via JS */
+#resultadoVerificacao {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 28px; /* Evita que o layout "pule" quando o texto aparecer */
+    color: #002776;
+}
+
+/* Classes dinâmicas para você usar no seu JavaScript (Opcional) */
+.pode-votar {
+    color: #009c3b !important; /* Verde */
+}
+.nao-pode-votar {
+    color: #d92525 !important; /* Vermelho */
+}
+.voto-facultativo {
+    color: #e5a900 !important; /* Amarelo escuro */
+}

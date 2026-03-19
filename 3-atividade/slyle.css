@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Zera as margens padrão e define a fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página lembrando uma mesa ou mural */
+body {
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* O "papel" do boletim */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Borda azul no topo para dar ar de documento oficial */
+    border-top: 8px solid #1e3a8a; 
+    text-align: center;
+}
+
+/* Título do Boletim */
+h1 {
+    color: #1e3a8a;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    /* Linha tracejada imitando formulário de papel */
+    border-bottom: 2px dashed #cbd5e1; 
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 25px; /* Espaço abaixo do logo */
+}
+
+.logo {
+    max-width: 300px; /* Define uma largura máxima limpa */
+    height: auto;     /* Mantém a proporção da imagem */
+    display: block;    /* Remove espaços em branco indesejados abaixo */
+}
+
+/* Título Acadêmico */
+h1 {
+    font-family: 'Georgia', serif;
+    color: #1a3a5a;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+
+/* Estilo do rótulo (label) */
+label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+/* Caixa de digitação da nota */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f8fafc;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    background-color: #ffffff;
+}
+
+/* Botão de emissão */
+button {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #172554;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Área onde o resultado vai aparecer */
+#resultadoBoletim {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+}

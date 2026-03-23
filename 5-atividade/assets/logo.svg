@@ -1,0 +1,15 @@
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Maçã -->
+  <circle cx="40" cy="40" r="20" fill="#e63946"/>
+  
+  <!-- Folha -->
+  <ellipse cx="50" cy="20" rx="8" ry="4" fill="#2a9d8f" transform="rotate(-30 50 20)"/>
+  
+  <!-- Cabinho -->
+  <rect x="38" y="15" width="4" height="10" fill="#6d4c41"/>
+
+  <!-- Texto -->
+  <text x="80" y="45" font-family="Arial, sans-serif" font-size="20" fill="#333">
+    AppleShop
+  </text>
+</svg>

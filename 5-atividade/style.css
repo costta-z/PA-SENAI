@@ -1,0 +1,104 @@
+/* Importando uma fonte mais amigável e arredondada */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    /* Fundo verde bem claro com bolinhas sutis remetendo a uma feira/hortifruti */
+    background-color: #f1f8e9; 
+    background-image: radial-gradient(#c5e1a5 10%, transparent 10%),
+                      radial-gradient(#c5e1a5 10%, transparent 10%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    
+    /* Centralizando o conteúdo na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    /* Borda superior vermelha para destacar o tema da maçã */
+    border-top: 8px solid #e63946; 
+}
+
+label {
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2a9d8f; /* Verde orgânico */
+}
+
+/* Adicionando o emoji de maçã diretamente pelo CSS antes do texto */
+label::before {
+    content: "🍎 ";
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Efeito ao clicar no input (foco) */
+input[type="number"]:focus {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 8px rgba(42, 157, 143, 0.2);
+}
+
+button {
+    width: 100%;
+    background-color: #2a9d8f; /* Verde chamativo para a compra */
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+}
+
+button:hover {
+    background-color: #21867a; /* Verde um pouco mais escuro no hover */
+}
+
+button:active {
+    transform: scale(0.97); /* Efeito de "apertar" o botão */
+}
+
+#resultadoCompra {
+    margin-top: 25px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #e63946; /* Vermelho maçã para o resultado */
+    min-height: 28px; /* Evita que a tela pule quando o texto aparecer */
+}

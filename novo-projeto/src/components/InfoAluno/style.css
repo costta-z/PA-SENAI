@@ -1,0 +1,88 @@
+/* Importando uma fonte que lembra o estilo dos quadrinhos/Marvel */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+    --marvel-red: #ed1d24;
+    --marvel-black: #202020;
+    --marvel-white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.info-aluno {
+    background-color: var(--marvel-black);
+    color: var(--marvel-white);
+    padding: 2rem;
+    width: 300px;
+    border-radius: 8px;
+    border-left: 10px solid var(--marvel-red);
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+/* Estilo do Título (Estilo Logo Marvel) */
+.info-aluno h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: var(--marvel-red);
+    color: var(--marvel-white);
+    display: inline-block;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    transform: skewX(-5deg); /* Inclinação dinâmica */
+}
+
+.info-aluno p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    transition: var(--transition);
+}
+
+.info-aluno p strong {
+    color: var(--marvel-red);
+}
+
+/* --- EFEITOS AO PASSAR O MOUSE (HOVER) --- */
+
+.info-aluno:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 0 25px var(--marvel-red); /* Glow heroico */
+    border-left-width: 20px;
+}
+
+.info-aluno:hover h2 {
+    transform: skewX(-5deg) scale(1.1);
+    background-color: var(--marvel-white);
+    color: var(--marvel-red);
+}
+
+.info-aluno:hover p {
+    padding-left: 10px;
+    color: #ccc;
+}
+
+/* Efeito de flash de luz ao passar o mouse */
+.info-aluno::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    transition: 0.5s;
+}
+
+.info-aluno:hover::after {
+    left: 120%;
+}

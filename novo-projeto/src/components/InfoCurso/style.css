@@ -1,0 +1,78 @@
+/* Importando a fonte que mais se aproxima da San Francisco da Apple */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --apple-bg: #f5f5f7;
+    --apple-card: rgba(255, 255, 255, 0.7);
+    --apple-text: #1d1d1f;
+    --apple-text-secondary: #86868b;
+    --apple-blue: #0071e3;
+}
+
+body {
+    background-color: var(--apple-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.info-curso {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--apple-card);
+    /* Efeito de Vidro (Glassmorphism) */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    padding: 40px;
+    width: 320px;
+    border-radius: 22px; /* Cantos arredondados clássicos da Apple */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Transição suave "Apple style" */
+    color: var(--apple-text);
+}
+
+/* Estilizando o título "Dados do Curso" */
+.info-curso p:first-child {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--apple-text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Estilizando as linhas de informação */
+.info-curso p:not(:first-child) {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 12px 0;
+    letter-spacing: -0.02em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Simulando um rótulo sutil para os dados */
+.info-curso p:not(:first-child)::before {
+    content: attr(data-label); /* Opcional: se você usar data-attributes */
+    font-size: 11px;
+    color: var(--apple-blue);
+    margin-bottom: 4px;
+}
+
+/* --- EFEITOS DE HOVER (AO PASSAR O MOUSE) --- */
+
+.info-curso:hover {
+    transform: scale(1.02) translateY(-5px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito sutil de brilho nos itens internos */
+.info-curso p:hover {
+    color: var(--apple-blue);
+    transition: color 0.3s ease;
+}

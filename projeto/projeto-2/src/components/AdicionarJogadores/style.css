@@ -1,0 +1,122 @@
+/* style.css atualizado com animações */
+
+.formulario {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    border-top: 8px solid #0056b3;
+}
+
+h2 {
+    color: #0056b3;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #e30613; 
+    box-shadow: 0 0 5px rgba(227, 6, 19, 0.2);
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+button:hover {
+    background-color: #e30613;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 2px dashed #0056b3;
+    opacity: 0.3;
+}
+
+/* --- SEÇÃO DA LISTA COM ANIMAÇÃO --- */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #e30613;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Aplicação da animação de entrada */
+    animation: entrarEmCampo 0.5s ease-out forwards;
+    
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateX(5px);
+    background-color: #f0f4f8;
+}
+
+li strong {
+    color: #0056b3;
+}
+
+li span:last-child {
+    background: #0056b3;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Definição da animação */
+@keyframes entrarEmCampo {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Começa um pouco abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Sobe para a posição original */
+    }
+}

@@ -1,0 +1,57 @@
+/* style.css atualizado */
+
+.header {
+    background: linear-gradient(90deg, #0056b3 0%, #003d7a 100%);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #e30613;
+    margin-bottom: 30px;
+}
+
+/* Novo: Centraliza o conteúdo (logo e texto) */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaço entre a logo e o texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /* Animação suave ao carregar */
+    animation: slideDown 0.6s ease-out;
+}
+
+/* Novo: Estilo da logo */
+.logo {
+    height: 70px; /* Ajuste o tamanho da logo como preferir */
+    width: auto;
+    object-fit: contain;
+    /* Adiciona uma sombra suave para destacar a logo sobre o azul */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Texto do título (ajustado para o novo alinhamento) */
+.header div.title {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Animação para o conteúdo descer suavemente */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

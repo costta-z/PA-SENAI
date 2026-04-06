@@ -1,0 +1,29 @@
+/* Adicione isso ao seu arquivo style.css */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: center; /* Centraliza o título */
+    align-items: center;
+    position: sticky; /* Mantém o header no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.header div {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2563eb; /* Azul primário para dar destaque */
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+}
+
+/* Ajuste no body para não grudar no header */
+body {
+    margin: 0;
+    padding-top: 0; /* Remove o padding-top anterior se existir */
+}

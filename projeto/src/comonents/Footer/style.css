@@ -1,0 +1,27 @@
+/* Adicione isso ao seu arquivo style.css */
+
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    margin-top: 40px;
+    border-top: 1px solid #e5e7eb; /* Linha sutil para separar do conteúdo */
+    text-align: center;
+    color: #6b7280; /* Cinza suave para não brigar com o conteúdo principal */
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Um toque de cor no nome SENAI para dar identidade */
+.footer p br + text, 
+.footer {
+    transition: color 0.3s;
+}
+
+.footer:hover {
+    color: #374151; /* Escurece levemente ao passar o mouse */
+}

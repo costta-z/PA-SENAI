@@ -2,8 +2,8 @@ import './style.css'
 
 export default function Header () {
     return (
-    <header className='header'>
-        <div>Sistema de clientes</div>
-    </header>
+        <header className='header'>
+            <div>Sistema de Clientes</div>
+        </header>
     )
 }

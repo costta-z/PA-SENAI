@@ -1,0 +1,85 @@
+/* Importação de uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.formulario {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+button {
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 2rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f9fafb;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border-left: 4px solid #3b82f6;
+    font-size: 0.9rem;
+    color: #4b5563;
+    display: flex;
+    justify-content: space-between;
+}

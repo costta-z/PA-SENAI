@@ -9,10 +9,12 @@ export default function AdicionarUsuario() {
     const handlerAdicionarUsuario = (event) => {
         event.preventDefault()
         if (nome && email) {
-            setListaDeUsuario([...AdicionarUsuario, {nome, email}])
+            // Correção: Usar o estado anterior 'listaDeUsuarios'
+            setListaDeUsuario([...listaDeUsuarios, { nome, email }])
 
-            setNome
-            setEmail
+            // Correção: Chamar as funções para limpar os campos
+            setNome('')
+            setEmail('')
         }
     }
 
@@ -20,16 +22,20 @@ export default function AdicionarUsuario() {
         <div className='formulario'>
             <h2>Adicionar usuário</h2>
             <form onSubmit={handlerAdicionarUsuario}>
-                <input type="text"
-                       value={nome}
-                       onChange={(e) => setNome(e.target.value)}                 
+                <input 
+                    type="text"
+                    placeholder="Digite o nome"
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}                 
                 />
 
-                <input type="text"
-                       value={email}
-                       onChange={(e) => setEmail(e.target.value)}                 
+                <input 
+                    type="email"
+                    placeholder="Digite o e-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}                 
                 />
-                <BUtton type='submit'>Adicionar</BUtton>
+                <button type='submit'>Adicionar</button>
             </form>
 
             <hr />
@@ -38,11 +44,11 @@ export default function AdicionarUsuario() {
             <ul>
                 {listaDeUsuarios.map((usuario, index) => (
                     <li key={index}>
-                        {usuario.nome} - {usuario.email}
+                        <span><strong>{usuario.nome}</strong></span>
+                        <span>{usuario.email}</span>
                     </li>
                 ))}
             </ul>
-
         </div>
     )
 }

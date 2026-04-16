@@ -26,7 +26,7 @@
 
 /* Novo: Estilo da logo */
 .logo {
-    height: 70px; /* Ajuste o tamanho da logo como preferir */
+    height: 100px; /* Ajuste o tamanho da logo como preferir */
     width: auto;
     object-fit: contain;
     /* Adiciona uma sombra suave para destacar a logo sobre o azul */
@@ -55,3 +55,26 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column; /* Empilha a logo e o texto em telas pequenas */
+        gap: 10px;
+    }
+    
+    .header div.title {
+        font-size: 1.2rem; /* Diminui um pouco o texto no celular */
+        text-align: center;
+    }
+
+    .logo {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    /* Trocando a sombra escura por um brilho claro suave */
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+    
+    /* Opcional: aumentar um pouco o contraste da própria imagem */
+    /* contrast(1.1) deixa as cores originais mais vivas */
+    /* filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6)) contrast(1.1); */
+}}

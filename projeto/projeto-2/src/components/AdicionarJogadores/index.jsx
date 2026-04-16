@@ -20,7 +20,7 @@ export default function Adicionarjogador() {
 
     return (
         <div className='formulario'>
-            <h2>Adicionar usuário</h2>
+            <h2>Adicionar Jogador</h2>
             <form onSubmit={handlerAdicionarjogador}>
                 <input 
                     type="text"

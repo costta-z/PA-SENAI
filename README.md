@@ -1,20 +1,10 @@
-# GIT
+#  API COM NODEJS
 
-## COMANDOS BÁSICOS
-
-1) Trazendo possíveis mudanças do GitHub;
-git pull
-
-2) Adicionar arquivos para comit:
-git add .
-
-3) Criar versionamento (commit):
-git commit -m "Comandos básicos do git."
-
-4) Enviar alterações para GitHub:
-git push
-
-## Branch
-
-Mostrar branches no computador:
-git branch
+## INSTALAR:
+```
+npm i express sequelize mysql2 cors
+```
+## INICIAR PROJETO:
+```
+npm init -y
+```
